@@ -11,21 +11,23 @@
     <a-scene>
         <!-- ↓↓↓ここから下に記述する↓↓↓ -->
         <a-assets>
-            <a-assets-item id="moongirl-obj" src="assets/moongirl.obj">
+            <a-assets-item id="moongirl-obj" src="./assets/moongirl.obj">
             </a-assets-item>
-            <a-assets-item id="moongirl-mtl" src="assets/moongirl.mtl"></a-assets-item>
-            <a-assets-item id="moongirl-png" src="assets/moongirl.png"></a-assets-item>
-            <img id="temple" src="assets/temple_360.jpg">
+            <a-assets-item id="moongirl-mtl" src="./assets/moongirl.mtl"></a-assets-item>
+            <a-assets-item id="moongirl-png" src="./assets/moongirl.png"></a-assets-item>
+            <img id="temple" src="./assets/temple_360.jpg">
         </a-assets>
         <a-entity obj-model="obj: #moongirl-obj; mtl: #moongirl-mtl; png: #moongirl-png">
             <a-animation attribute="position" begin="3000" to="3 3 3"></a-animation>
-            <a-animation attribute="position" begin="3500" to="10 10 10"></a-animation>
-            <a-animation attribute="position" begin="4000" to="20 20 20"></a-animation>
-            <a-animation attribute="position" begin="4500" to="1 1 1"></a-animation>
-            <a-animation attribute="rotation" begin="5000" to="0 40 0">
+            <a-animation attribute="position" begin="3500" from="3 3 3" to="-10 -10 -10"></a-animation>
+            <a-animation attribute="position" begin="4000" from="-10 -10 -10" to="1 10 10"></a-animation>
+            <a-animation attribute="position" begin="4500" from="10 10 10" to="1 1 1"></a-animation>
+            <a-animation attribute="rotation" begin="5000" to="0 400 0">
+
+
+
                 <a-animation>
-                    <a-animation attribute="rotation" begin="6000" to="0 60 0">
-                        <a-animation>
+                    <!--            <a-animation attribute="rotation" begin="6000" to="0 60 0" ><a-animation>-->
 
         </a-entity>
         <a-camera position="10 5 15" rotation="0 40 0"></a-camera>
